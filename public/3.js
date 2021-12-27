@@ -33,7 +33,6 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
-//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -47,24 +46,13 @@ __webpack_require__.r(__webpack_exports__);
       roles: []
     };
   },
-  created: function created() {
-    this.get_roles();
-  },
+  created: function created() {},
   methods: {
-    get_roles: function get_roles() {
-      var _this = this;
-
-      axios.get('api/GetRoles').then(function (res) {
-        _this.roles = res.data;
-        console.log(res.data);
-      });
-    },
     Register: function Register() {
       axios.post('api/Register', {
         name: this.name,
         email: this.email,
-        password: this.password,
-        role: this.role
+        password: this.password
       }).then(function (res) {
         window.location.href = 'login';
       })["catch"](function (error) {
@@ -152,24 +140,6 @@ var render = function () {
                                 _vm.name = $$v
                               },
                               expression: "name",
-                            },
-                          }),
-                          _vm._v(" "),
-                          _c("v-select", {
-                            attrs: {
-                              label: "Roles",
-                              items: _vm.roles,
-                              "item-value": "role_id",
-                              "item-text": "name",
-                              outlined: "",
-                              dense: "",
-                            },
-                            model: {
-                              value: _vm.role,
-                              callback: function ($$v) {
-                                _vm.role = $$v
-                              },
-                              expression: "role",
                             },
                           }),
                           _vm._v(" "),
