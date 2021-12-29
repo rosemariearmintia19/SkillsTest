@@ -26,9 +26,13 @@ export default new VueRouter({
             
         },
         {
-            path: '/hello',
-            name: 'hello',
-            component: Hello,
+            path: '/home',
+            name: 'home',
+            components:{
+                default:()=> import('./views/pages/Home'),
+                Nav:()=> import('./components/pages/Navbar'),
+                Footer:()=> import('./components/pages/Footer')
+            }
         },
     ],
 });

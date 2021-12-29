@@ -10,7 +10,6 @@
                             <v-text-field id="password" name="Password" v-model="password" :append-icon="show1 ? 'mdi-eye' : 'mdi-eye-off'" :type="show1 ? 'text' : 'password'" label="Password" hint="At least 8 characters" counter @click:append="show1 = !show1"></v-text-field>
                             <v-btn class="d-flex justify-center mt-3" primary large block color="teal" @click="Login()" style="color:white">Log in</v-btn>
                         </v-form>
-                        <v-btn class="d-flex justify-center mt-3" outlined color="teal" :to="{ name: 'forgot_password'}">Forgot Password?</v-btn>
                     </v-container>
                 </v-card>
             </v-col>
@@ -18,7 +17,7 @@
                 <v-card height="600px" color="teal">
                     <v-container style="position: relative;top: 30%;" class="text-xs-center">
                         <center>
-                            <h1 style="color:white">Guess User?</h1>
+                            <h1 style="color:white">New User?</h1>
                             <v-btn class="mt-10" outlined color="white" :to="{ name: 'register'}" >Register</v-btn>
                         </center>
 

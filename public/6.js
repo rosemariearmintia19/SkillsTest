@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[6],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Navbar.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
@@ -461,7 +461,11 @@ var render = function () {
             "v-btn",
             {
               staticStyle: { "text-decoration": "none" },
-              attrs: { icon: "", href: "#" },
+              attrs: {
+                icon: "",
+                href: "https://www.facebook.com/KRBowtiqueph",
+                target: "_blank",
+              },
             },
             [_c("v-icon", [_vm._v("mdi-facebook")])],
             1
@@ -471,7 +475,11 @@ var render = function () {
             "v-btn",
             {
               staticStyle: { "text-decoration": "none" },
-              attrs: { icon: "", href: "#" },
+              attrs: {
+                icon: "",
+                href: "https://www.instagram.com/krbowtique28",
+                target: "_blank",
+              },
             },
             [_c("v-icon", [_vm._v("mdi-instagram")])],
             1

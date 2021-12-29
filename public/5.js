@@ -1,4 +1,4 @@
-(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[2],{
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[5],{
 
 /***/ "./node_modules/babel-loader/lib/index.js?!./node_modules/vue-loader/lib/index.js?!./resources/js/components/pages/Navbar.vue?vue&type=script&lang=js&":
 /*!***********************************************************************************************************************************************************************!*\
@@ -127,7 +127,6 @@ __webpack_require__.r(__webpack_exports__);
     },
     users: function users() {
       this.user_details = JSON.parse(localStorage.getItem('user'));
-      this.role = this.user_details.role == 1 ? 'ADMIN' : 'USER';
     }
   },
   props: {
@@ -222,7 +221,11 @@ var render = function () {
             { staticClass: "mt-5", staticStyle: { "text-align": "center" } },
             [
               _c("h6", { staticStyle: { "font-family": "Trebuchet MS" } }, [
-                _vm._v(_vm._s(_vm.user_details.name)),
+                _vm._v(
+                  _vm._s(_vm.user_details.firstname) +
+                    " " +
+                    _vm._s(_vm.user_details.lastname)
+                ),
               ]),
               _vm._v(" "),
               _c(
@@ -236,7 +239,7 @@ var render = function () {
                   _c(
                     "span",
                     { staticStyle: { "font-family": "Trebuchet MS" } },
-                    [_vm._v("LOGGED-In AS " + _vm._s(_vm.role))]
+                    [_vm._v("Logged-In as " + _vm._s(_vm.user_details.role))]
                   ),
                 ],
                 1
@@ -461,7 +464,11 @@ var render = function () {
             "v-btn",
             {
               staticStyle: { "text-decoration": "none" },
-              attrs: { icon: "", href: "#" },
+              attrs: {
+                icon: "",
+                href: "https://www.facebook.com/KRBowtiqueph",
+                target: "_blank",
+              },
             },
             [_c("v-icon", [_vm._v("mdi-facebook")])],
             1
@@ -471,7 +478,11 @@ var render = function () {
             "v-btn",
             {
               staticStyle: { "text-decoration": "none" },
-              attrs: { icon: "", href: "#" },
+              attrs: {
+                icon: "",
+                href: "https://www.instagram.com/krbowtique28",
+                target: "_blank",
+              },
             },
             [_c("v-icon", [_vm._v("mdi-instagram")])],
             1

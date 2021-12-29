@@ -13,6 +13,7 @@ import Vuetify from 'vuetify'
 import Routes from './routes'
 import App from './views/template/App';
 import store from './store'
+import '@mdi/font/css/materialdesignicons.css';
 Vue.use(Vuetify)
 
 /**
